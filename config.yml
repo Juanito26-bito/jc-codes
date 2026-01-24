@@ -1,0 +1,31 @@
+# Configuration file for Planck's Law Rejection Sampling
+
+# Physical constants
+constants:
+  h: 6.62607015e-34      # Planck constant (J·s)
+  c: 299792458.0         # Speed of light (m/s)
+  k_B: 1.380649e-23      # Boltzmann constant (J/K)
+
+# Temperature parameter
+temperature:
+  T: 5000             # Temperature in Kelvin (e.g., Sun's surface temperature)
+
+# Wavelength range for sampling
+wavelength:
+  lambda_min: 1.0e-7     # Minimum wavelength (m) - 100 nm
+  lambda_max: 3.0e-6     # Maximum wavelength (m) - 3000 nm
+
+# Sampling parameters
+sampling:
+  n_samples: 1000000       # Number of samples to generate
+  max_iterations: 1000000 # Maximum iterations to prevent infinite loops
+
+# Proposal distribution
+proposal:
+  type: "uniform"        # Type of proposal distribution (uniform, exponential)
+  
+# Output settings
+output:
+  plot: true             # Whether to plot results
+  save_samples: true     # Whether to save samples to file
+  output_file: "samples.csv"
